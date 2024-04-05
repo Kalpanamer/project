@@ -3,7 +3,7 @@ name: Deploy Website
 on:
   push:
     branches:
-      - main  # or whichever branch you want to deploy from
+      - main 
 
 jobs:
   deploy:
@@ -15,15 +15,11 @@ jobs:
 
       - name: Build website
         run: |
-          # Add commands to build your website assets
-          # For example, if you're using npm scripts:
-          # npm install
-          # npm run build
+         
 
       - name: Deploy to hosting service
-        # Use appropriate action for deploying to your hosting service (e.g., GitHub Pages, Netlify, Vercel)
-        # Example using GitHub Pages:
+       
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./build  # Specify the directory where your built assets are located
+          publish_dir: ./build 
